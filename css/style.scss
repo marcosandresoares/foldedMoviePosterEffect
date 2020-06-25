@@ -1,0 +1,202 @@
+// IMPORTS
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap');
+
+
+// VARIABLES
+$akira : #D90D0D;
+$ghost : #8386BD;
+$paprika : #AC1B0A;
+$mononoke : #10150F;
+$neon-genesis: #2E3792;
+$light-grey: #EBEDF2;
+$medium-grey: #C7CFD9;
+$black: #212122;
+
+$jost: "Jost", sans-serif;
+
+// STYLING
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212122;
+    font-family: $jost;
+}
+
+.movie-poster {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-items: center;
+    gap: 60px 30px;
+    margin: 0 auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+}
+
+.movie-poster > img {
+    width: 450px;
+    box-shadow: 0px 15px 35px -5px rgba(50, 88, 130, 0.32);
+}
+
+.movie-poster h1,
+.movie-poster h2 {
+    width: 100%;
+}
+
+// Folded Poster Effect
+
+.poster {
+    width: 500px;
+    padding: 7%;
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.2);
+    -webkit-filter: saturate(70%) contrast(85%);
+    filter: saturate(70%) contrast(85%);
+}
+
+.poster img {
+    width: 100%;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.poster::before,
+.poster::after {
+    content: '';
+    width: 100%;
+    left: 0;
+    position: absolute;
+}
+
+.poster::before {
+    height: 4%;
+    bottom: -4%;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(177deg, rgba(0,0,0,0.22) 10%, transparent 50%);
+    background-size: 49% 100%;
+    background-position: 2% 0, 98% 0;
+}
+
+.poster:after {
+    height: 100%;
+    top: 0;
+    z-index: 2;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(to bottom, rgba(255,255,255,0.1) 0.5%, rgba(0,0,0,0.15) 1.2%, transparent 1.2%), linear-gradient(265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(-5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(5deg, rgba(0,0,0,0.1), transparent 10%), linear-gradient(-265deg, rgba(0,0,0,0.2), transparent 10%), linear-gradient(-5deg, rgba(0,0,0,0.2), transparent 15%), linear-gradient(266deg, rgba(0,0,0,0.2), transparent 10%);
+    background-size: 50% 100%, 100% 33.3333%, 100% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%, 50% 33.3333%;
+    background-position: right top, left center, left bottom, left top, left top, right top, left center, right center, right center, left bottom;
+}
+
+// Poster
+.movie-space h1,
+.movie-space h2,
+.movie-space p{
+    color: #221122;
+    line-height: 1.5em;
+}
+
+.movie-space h1 {
+    font-size: 3em;
+    width: 100%;
+    padding-left: 3em;
+}
+
+.movie-space h2 {
+    font-size: 1.6em;
+    width: 100%;
+    padding-left: 5.5em;
+}
+
+.movie-space p {
+    margin-top: 1em;
+    width: 750px;
+    padding-left: 9em;
+}
+
+.director {
+    font-size: 0.7em;
+    color: $black;
+}
+
+// Akira
+
+.akira {
+    background-color: $light-grey ;
+    width: 100%;
+    padding: 2em 0 ;
+    margin: 0;
+}
+
+h1.title-akira,
+h2.title-akira {
+    color: $akira;
+}
+
+// Ghost In the Shell
+
+.ghost {
+    background-color: $medium-grey ;
+    width: 100%;
+    padding: 2em 0 ;
+    margin: 0;
+}
+
+h1.title-gits,
+h2.title-gits {
+    color: $ghost;
+}
+
+// Paprika
+
+.paprika {
+    background-color: $light-grey ;
+    width: 100%;
+    padding: 2em 0 ;
+    margin: 0;
+}
+
+h1.title-paprika,
+h2.title-paprika {
+    color: $paprika;
+}
+
+// Mononoke
+.mononoke {
+    background-color: $medium-grey ;
+    width: 100%;
+    padding: 2em 0 ;
+    margin: 0;
+}
+
+h1.title-mononoke,
+h2.title-mononoke {
+    color: $mononoke;
+}
+
+// Neon Genesis
+.neon-genesis {
+    background-color: $light-grey ;
+    width: 100%;
+    padding: 2em 0 ;
+    margin: 0;
+}
+
+h1.title-neon,
+h2.title-neon {
+    color: $neon-genesis;
+}
+
+
+
+
